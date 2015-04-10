@@ -115,7 +115,7 @@ if( ! class_exists( 'YITH_WC_Social_Login_Admin' ) ){
         private function create_menu_items() {
             // Add a panel under YITH Plugins tab
             add_action( 'admin_menu', array( $this, 'register_panel' ), 5 );
-            add_action( 'ywsl_premium_tab', array( $this, 'premium_tab' ) );
+           // add_action( 'ywsl_premium_tab', array( $this, 'premium_tab' ) );
         }
 
 

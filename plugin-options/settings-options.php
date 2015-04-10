@@ -17,28 +17,28 @@ return array(
 
 	'settings' => array(
 
-        'section_general_settings_videobox'         => array(
-            'name' => __( 'Upgrade to the PREMIUM VERSION', 'ywsl' ),
-            'type' => 'videobox',
-            'default' => array(
-                'plugin_name'        => __( 'YITH WooCommerce Social Login', 'ywsl' ),
-                'title_first_column' => __( 'Discover Advanced Features', 'ywsl' ),
-                'description_first_column' => __('Upgrade to the PREMIUM VERSION
-of YITH WooCommerce Social Login to benefit from all features!', 'ywsl'),
-                'video' => array(
-                    'video_id'           => '118792418',
-                    'video_image_url'    =>  YITH_YWSL_ASSETS_URL.'/images/yith-woocommerce-social-login.jpg',
-                    'video_description'  => __( 'YITH WooCommerce Social Login', 'yit' ),
-                ),
-                'title_second_column' => __( 'Get Support and Pro Features', 'ywsl' ),
-                'description_second_column' => __('By purchasing the premium version of the plugin, you will benefit from the advanced features of the product and you will get one year of free update and support through our platform available 24h/24.', 'ywsl'),
-                'button' => array(
-                    'href' => 'http://yithemes.com/themes/plugins/yith-woocommerce-social-login/',
-                    'title' => 'Get Support and Pro Features'
-                )
-            ),
-            'id'   => 'ywsl_general_videobox'
-        ),
+//        'section_general_settings_videobox'         => array(
+//            'name' => __( 'Upgrade to the PREMIUM VERSION', 'ywsl' ),
+//            'type' => 'videobox',
+//            'default' => array(
+//                'plugin_name'        => __( 'YITH WooCommerce Social Login', 'ywsl' ),
+//                'title_first_column' => __( 'Discover Advanced Features', 'ywsl' ),
+//                'description_first_column' => __('Upgrade to the PREMIUM VERSION
+//of YITH WooCommerce Social Login to benefit from all features!', 'ywsl'),
+//                'video' => array(
+//                    'video_id'           => '118792418',
+//                    'video_image_url'    =>  YITH_YWSL_ASSETS_URL.'/images/yith-woocommerce-social-login.jpg',
+//                    'video_description'  => __( 'YITH WooCommerce Social Login', 'yit' ),
+//                ),
+//                'title_second_column' => __( 'Get Support and Pro Features', 'ywsl' ),
+//                'description_second_column' => __('By purchasing the premium version of the plugin, you will benefit from the advanced features of the product and you will get one year of free update and support through our platform available 24h/24.', 'ywsl'),
+//                'button' => array(
+//                    'href' => 'http://yithemes.com/themes/plugins/yith-woocommerce-social-login/',
+//                    'title' => 'Get Support and Pro Features'
+//                )
+//            ),
+//            'id'   => 'ywsl_general_videobox'
+//        ),
 
 		'section_general_settings'     => array(
 			'name' => __( 'General settings', 'ywsl' ),
