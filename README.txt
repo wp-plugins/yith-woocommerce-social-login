@@ -3,8 +3,8 @@
 Contributors: yithemes
 Tags: social login, login, social provider, social authentication, authentication, connect with social, woocommerce connect, facebook, google, register, social networks, twitter
 Requires at least: 3.5.1
-Tested up to: 4.1.1
-Stable tag: 1.0.0
+Tested up to: 4.2
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,8 +23,6 @@ Login buttons are automatically added in the following pages:
 * "My Account" page
 * Checkout page
 * Wordpress Login
-
-With the shortcode [yith_wc_social_login] you can display login button anywhere else in the site.
 
 From option panel, you can change the text of the labels displayed above login buttons and the text in checkout page.
 
@@ -46,8 +44,6 @@ YITH WooCommerce Social Login will add a new tab called "Social Login" in "YIT P
 = I would like to allow only Facebook login, what should I do?  =
 Go to Yit Plugins->Social Login->Settings: there you can enable only Facebook as Social Network available for login.
 
-= I would like to add social login within a page, is that possible?  =
-Yes, you just have to type the shortcode [yith_wc_social_login] into your WordPress page editor.
 
 == Screenshots ==
 
@@ -55,17 +51,15 @@ Yes, you just have to type the shortcode [yith_wc_social_login] into your WordPr
 2. YITH WooCommerce Social Login in "My Account" page
 3. YITH WooCommerce Social Login in Checkout page
 4. YITH WooCommerce Social Login in WordPress Login
-5. [yith_wc_social_login] shortcode
 
 
 == Changelog ==
 = 1.0.0 =
-
 Initial release
 
 == Suggestions ==
 If you have any suggestions concerning how to improve YITH WooCommerce Social Login, you can [write to us](mailto:plugins@yithemes.com "Your Inspiration Themes"), so that we can improve YITH WooCommerce Social Login.
 
 == Upgrade notice ==
-= 1.0.1 =
+= 1.0.0 =
 Initial release

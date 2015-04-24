@@ -71,8 +71,9 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 			$this->_set_social_list();
 			$this->_set_social_list_enabled();
 
-            add_shortcode( 'yith_wc_social_login', array($this,'yith_wc_social_login_shortcode') );
-
+            if( defined('YITH_YWSL_FREE_INIT') ) {
+                add_shortcode( 'yith_wc_social_login', array( $this, 'yith_wc_social_login_shortcode' ) );
+            }
 			$this->hybridauth = new Hybrid_Auth( $this->config );
 			add_action('init', array($this,'get_login_request'));
 		}

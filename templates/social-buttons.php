@@ -26,7 +26,7 @@ foreach( $socials as $key=>$value):
     if( $enabled == 'yes'):
 
 ?>
-    <a class="ywsl-social ywsl-<?php echo $key  ?>" href="<?php echo  add_query_arg( array('ywsl_social'=>$key, 'redirect'=> urlencode(ywsl_curPageURL())),site_url('wp-login.php')) ?>">
+    <a class="ywsl-social ywsl-<?php echo $key  ?>" href="<?php echo  esc_url(add_query_arg( array('ywsl_social'=>$key, 'redirect'=> urlencode(ywsl_curPageURL())),site_url('wp-login.php'))) ?>">
         <img src="<?php echo YITH_YWSL_ASSETS_URL.'/images/'.$key.'.png' ?>" alt="<?php echo $value  ?>"/>
     </a>
 <?php
