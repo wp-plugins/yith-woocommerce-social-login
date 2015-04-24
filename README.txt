@@ -54,6 +54,10 @@ Go to Yit Plugins->Social Login->Settings: there you can enable only Facebook as
 
 
 == Changelog ==
+= 1.0.1 =
+* Added: Wordpress 4.2 compatibility
+* Fixed: Wp security issue
+
 = 1.0.0 =
 Initial release
 
@@ -61,5 +65,9 @@ Initial release
 If you have any suggestions concerning how to improve YITH WooCommerce Social Login, you can [write to us](mailto:plugins@yithemes.com "Your Inspiration Themes"), so that we can improve YITH WooCommerce Social Login.
 
 == Upgrade notice ==
+= 1.0.1 =
+* Added: Wordpress 4.2 compatibility
+* Fixed: Wp security issue
+
 = 1.0.0 =
 Initial release
