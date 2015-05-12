@@ -20,17 +20,17 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
      * the metabox can be created using this code
      * <code>
      * $args1 = array(
-     *      'label'    => __( 'Metabox Label', 'yit' ),
+     *      'label'    => __( 'Metabox Label', 'yith-plugin-fw' ),
      *      'pages'    => 'page',   //or array( 'post-type1', 'post-type2')
      *      'context'  => 'normal', //('normal', 'advanced', or 'side')
      *      'priority' => 'default',
      *      'tabs'     => array(
      *                 'settings' => array( //tab
-     *                          'label'  => __( 'Settings', 'yit' ),
+     *                          'label'  => __( 'Settings', 'yith-plugin-fw' ),
      *                          'fields' => array(
      *                          'meta_checkbox' => array(
-     *                                 'label'    => __( 'Show title', 'yit' ),
-     *                                 'desc'     => __( 'Show title of the page or not.', 'yit' ),
+     *                                 'label'    => __( 'Show title', 'yith-plugin-fw' ),
+     *                                 'desc'     => __( 'Choose whether to show title of the page or not.', 'yith-plugin-fw' ),
      *                                 'type'     => 'checkbox',
      *                                 'private'  => false,
      *                                 'std'      => '1'),

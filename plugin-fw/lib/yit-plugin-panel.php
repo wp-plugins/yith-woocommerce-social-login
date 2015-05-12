@@ -60,8 +60,8 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
 
                 $default_args = array(
                     'parent_slug' => 'edit.php?',
-                    'page_title'  => __( 'Plugin Settings', 'yit' ),
-                    'menu_title'  => __( 'Settings', 'yit' ),
+                    'page_title'  => __( 'Plugin Settings', 'yith-plugin-fw' ),
+                    'menu_title'  => __( 'Settings', 'yith-plugin-fw' ),
                     'capability'  => 'manage_options',
 	                'icon_url'    => '',
 	                'position'    => null
@@ -92,7 +92,7 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
          * @author   Andrea Grillo <andrea.grillo@yithemes.com>
          */
         public function add_menu_page() {
-            add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yit' ), 'manage_options', 'yit_plugin_panel', NULL, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', 62 );
+            add_menu_page( 'yit_plugin_panel', __( 'YIT Plugins', 'yith-plugin-fw' ), 'manage_options', 'yit_plugin_panel', NULL, YIT_CORE_PLUGIN_URL . '/assets/images/yithemes-icon.png', 62 );
         }
 
         /**
@@ -285,16 +285,16 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 <h2><?php echo $this->get_tab_title() ?></h2>
                 <?php if ( $this->is_show_form() ) : ?>
                     <form method="post" action="options.php">
-                        <?php do_settings_sections( 'yit' ); ?>
+                        <?php do_settings_sections( 'yith-plugin-fw' ); ?>
                         <p>&nbsp;</p>
                         <?php settings_fields( 'yit_' . $this->settings['parent'] . '_options' ); ?>
                         <input type="hidden" name="<?php echo $this->get_name_field( 'current_tab' ) ?>" value="<?php echo esc_attr( $current_tab ) ?>" />
-                        <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yit' ) ?>" style="float:left;margin-right:10px;" />
+                        <input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'yith-plugin-fw' ) ?>" style="float:left;margin-right:10px;" />
                     </form>
                     <form method="post">
-                        <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yit' ) ?>
+                        <?php $warning = __( 'If you continue with this action, you will reset all options in this page.', 'yith-plugin-fw' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yit' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yit' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>
@@ -344,10 +344,10 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
                 return;
             }
             foreach ( $yit_options[$current_tab] as $section => $data ) {
-                add_settings_section( "yit_settings_{$current_tab}_{$section}", $this->get_section_title( $section ), $this->get_section_description( $section ), 'yit' );
+                add_settings_section( "yit_settings_{$current_tab}_{$section}", $this->get_section_title( $section ), $this->get_section_description( $section ), 'yith-plugin-fw' );
                 foreach ( $data as $option ) {
                     if ( isset( $option['id'] ) && isset( $option['type'] ) && isset( $option['name'] ) ) {
-                        add_settings_field( "yit_setting_" . $option['id'], $option['name'], array( $this, 'render_field' ), 'yit', "yit_settings_{$current_tab}_{$section}", array( 'option' => $option, 'label_for' => $this->get_id_field( $option['id'] ) ) );
+                        add_settings_field( "yit_setting_" . $option['id'], $option['name'], array( $this, 'render_field' ), 'yith-plugin-fw', "yit_settings_{$current_tab}_{$section}", array( 'option' => $option, 'label_for' => $this->get_id_field( $option['id'] ) ) );
                     }
                 }
             }
@@ -428,17 +428,17 @@ if ( ! class_exists( 'YIT_Plugin_Panel' ) ) {
         public function message() {
 
             $message = array(
-                'element_exists'   => $this->get_message( '<strong>' . __( 'The element you have entered already exists. Please, enter another name.', 'yit' ) . '</strong>', 'error', false ),
-                'saved'            => $this->get_message( '<strong>' . __( 'Settings saved', 'yit' ) . '.</strong>', 'updated', false ),
-                'reset'            => $this->get_message( '<strong>' . __( 'Settings reset', 'yit' ) . '.</strong>', 'updated', false ),
-                'delete'           => $this->get_message( '<strong>' . __( 'Element deleted correctly.', 'yit' ) . '</strong>', 'updated', false ),
-                'updated'          => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yit' ) . '</strong>', 'updated', false ),
-                'settings-updated' => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yit' ) . '</strong>', 'updated', false ),
-                'imported'         => $this->get_message( '<strong>' . __( 'Database imported correctly.', 'yit' ) . '</strong>', 'updated', false ),
-                'no-imported'      => $this->get_message( '<strong>' . __( 'An error has occurred during import. Please try again.', 'yit' ) . '</strong>', 'error', false ),
-                'file-not-valid'   => $this->get_message( '<strong>' . __( 'The added file is not valid.', 'yit' ) . '</strong>', 'error', false ),
-                'cant-import'      => $this->get_message( '<strong>' . __( 'Sorry, import is disabled.', 'yit' ) . '</strong>', 'error', false ),
-                'ord'              => $this->get_message( '<strong>' . __( 'Sorting successful.', 'yit' ) . '</strong>', 'updated', false )
+                'element_exists'   => $this->get_message( '<strong>' . __( 'The element you have entered already exists. Please, enter another name.', 'yith-plugin-fw' ) . '</strong>', 'error', false ),
+                'saved'            => $this->get_message( '<strong>' . __( 'Settings saved', 'yith-plugin-fw' ) . '.</strong>', 'updated', false ),
+                'reset'            => $this->get_message( '<strong>' . __( 'Settings reset', 'yith-plugin-fw' ) . '.</strong>', 'updated', false ),
+                'delete'           => $this->get_message( '<strong>' . __( 'Element deleted correctly.', 'yith-plugin-fw' ) . '</strong>', 'updated', false ),
+                'updated'          => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yith-plugin-fw' ) . '</strong>', 'updated', false ),
+                'settings-updated' => $this->get_message( '<strong>' . __( 'Element updated correctly.', 'yith-plugin-fw' ) . '</strong>', 'updated', false ),
+                'imported'         => $this->get_message( '<strong>' . __( 'Database imported correctly.', 'yith-plugin-fw' ) . '</strong>', 'updated', false ),
+                'no-imported'      => $this->get_message( '<strong>' . __( 'An error has occurred during import. Please try again.', 'yith-plugin-fw' ) . '</strong>', 'error', false ),
+                'file-not-valid'   => $this->get_message( '<strong>' . __( 'The added file is not valid.', 'yith-plugin-fw' ) . '</strong>', 'error', false ),
+                'cant-import'      => $this->get_message( '<strong>' . __( 'Sorry, import is disabled.', 'yith-plugin-fw' ) . '</strong>', 'error', false ),
+                'ord'              => $this->get_message( '<strong>' . __( 'Sorting successful.', 'yith-plugin-fw' ) . '</strong>', 'updated', false )
             );
 
             foreach ( $message as $key => $value ) {

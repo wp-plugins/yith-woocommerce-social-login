@@ -61,8 +61,8 @@ if ( ! class_exists( 'YIT_Plugin_Licence' ) ) {
 
             $this->_settings = array(
                 'parent_page' => 'yit_plugin_panel',
-                'page_title'  => __( 'Licence Activation', 'yit' ),
-                'menu_title'  => __( 'Licence Activation', 'yit' ),
+                'page_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
+                'menu_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
                 'capability'  => 'manage_options',
                 'page'        => 'yith_plugins_activation',
             );

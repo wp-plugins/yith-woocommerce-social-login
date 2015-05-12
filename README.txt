@@ -4,7 +4,7 @@ Contributors: yithemes
 Tags: social login, login, social provider, social authentication, authentication, connect with social, woocommerce connect, facebook, google, register, social networks, twitter
 Requires at least: 3.5.1
 Tested up to: 4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Go to Yit Plugins->Social Login->Settings: there you can enable only Facebook as
 
 
 == Changelog ==
+= 1.0.2 =
+* Fixed: Removed "read_friendlists" scope
+
 = 1.0.1 =
 * Added: Wordpress 4.2 compatibility
 * Fixed: Wp security issue
