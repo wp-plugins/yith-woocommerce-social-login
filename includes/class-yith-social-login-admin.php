@@ -244,7 +244,7 @@ if( ! class_exists( 'YITH_WC_Social_Login_Admin' ) ){
          * @return  string The premium landing link
          */
         public function get_premium_landing_uri(){
-            return defined( 'YITH_REFER_ID' ) ? $this->get_premium_landing_uri() . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
+            return defined( 'YITH_REFER_ID' ) ? $this->_premium_landing . '?refer_id=' . YITH_REFER_ID : $this->_premium_landing;
         }
 
 

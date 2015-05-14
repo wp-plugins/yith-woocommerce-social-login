@@ -33,7 +33,7 @@ of YITH WooCommerce Social Login to benefit from all features!', 'ywsl'),
                 'title_second_column' => __( 'Get Support and Pro Features', 'ywsl' ),
                 'description_second_column' => __('By purchasing the premium version of the plugin, you will benefit from the advanced features of the product and you will get one year of free update and support through our platform available 24h/24.', 'ywsl'),
                 'button' => array(
-                    'href' => 'http://yithemes.com/themes/plugins/yith-woocommerce-social-login/',
+                    'href' =>  YITH_WC_Social_Login_Admin()->get_premium_landing_uri(),
                     'title' => 'Get Support and Pro Features'
                 )
             ),
