@@ -1,0 +1,253 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YIT WooCommerce Social Login\n"
+"POT-Creation-Date: 2015-06-19 13:07+0100\n"
+"PO-Revision-Date: 2015-06-19 13:07+0100\n"
+"Last-Translator: \n"
+"Language-Team: Yithemes <plugins@yithemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_n:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../plugin-fw\n"
+
+#: ../includes/class-yith-social-login-admin.php:140
+#: ../includes/class-yith-social-login-admin.php:204
+msgid "Settings"
+msgstr ""
+
+#: ../includes/class-yith-social-login-admin.php:144
+#: ../includes/class-yith-social-login-admin.php:206
+msgid "Premium Version"
+msgstr ""
+
+#: ../includes/class-yith-social-login-admin.php:151
+#: ../includes/class-yith-social-login-admin.php:152
+msgid "Social Login"
+msgstr ""
+
+#: ../includes/class-yith-social-login-admin.php:232
+msgid "Plugin Documentation"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:195
+msgid "Add your email address"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:201
+msgid "Your email address is not valid!"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:207
+msgid "This email already exists"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:214
+msgid "Username is not valid!"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:433
+msgid "Unspecified error."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:436
+msgid "Hybriauth configuration error."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:439
+msgid "Provider not properly configured."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:442
+msgid "Unknown or disabled provider."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:445
+msgid "Missing provider application credentials."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:448
+msgid ""
+"Authentification failed. The user has canceled the authentication or the "
+"provider refused the connection."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:451
+msgid ""
+"User profile request failed. User might not be connected to the provider and "
+"have to authenticate again."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:454
+msgid "User not connected to the provider."
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:457
+msgid "Provider does not support this feature."
+msgstr ""
+
+#: ../init.php:32
+msgid ""
+"You can't activate the free version of YITH Woocommerce Social Login while "
+"you are using the premium one."
+msgstr ""
+
+#: ../init.php:53
+msgid ""
+"YITH Woocommerce Social Login is enabled but not effective. It requires "
+"Woocommerce in order to work."
+msgstr ""
+
+#: ../plugin-options/settings-options.php:21
+msgid "Upgrade to the PREMIUM VERSION"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:24
+#: ../plugin-options/settings-options.php:31
+msgid "YITH WooCommerce Social Login"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:25
+msgid "Discover Advanced Features"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:26
+msgid ""
+"Upgrade to the PREMIUM VERSION\n"
+"of YITH WooCommerce Social Login to benefit from all features!"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:33
+msgid "Get Support and Pro Features"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:34
+msgid ""
+"By purchasing the premium version of the plugin, you will benefit from the "
+"advanced features of the product and you will get one year of free update "
+"and support through our platform available 24h/24."
+msgstr ""
+
+#: ../plugin-options/settings-options.php:44
+msgid "General settings"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:50
+msgid "Label"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:51
+msgid "Change content of the label to display above social login buttons"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:53
+msgid "Login with:"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:58
+msgid "Description in checkout page"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:59
+msgid "Change content of the description in checkout page"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:61
+msgid "Social sign-in"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:71
+msgid "Facebook settings"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:77
+msgid "Enable Facebook Login"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:85
+msgid "Facebook App Id"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:93
+msgid "Facebook Secret"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:106
+msgid "Twitter settings"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:107
+#: ../plugin-options/settings-options.php:142
+msgid "<strong>Callback URL</strong>: "
+msgstr ""
+
+#: ../plugin-options/settings-options.php:113
+msgid "Enable Twitter Login"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:121
+msgid "Twitter Key"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:129
+msgid "Twitter Secret"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:141
+msgid "Google settings"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:149
+msgid "Enable Google Login"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:157
+msgid "Google ID"
+msgstr ""
+
+#: ../plugin-options/settings-options.php:165
+msgid "Google secret"
+msgstr ""
+
+#: ../plugin-options/socials.php:5
+msgid "Facebook"
+msgstr ""
+
+#: ../plugin-options/socials.php:9
+msgid "Twitter"
+msgstr ""
+
+#: ../plugin-options/socials.php:13
+msgid "Google"
+msgstr ""
+
+#: ../templates/request-info.php:10
+msgid "Login"
+msgstr ""
+
+#: ../templates/request-info.php:15
+msgid "Please, enter your information in the form below to continue"
+msgstr ""
+
+#: ../templates/request-info.php:27
+msgid "Username"
+msgstr ""
+
+#: ../templates/request-info.php:33
+msgid "Email"
+msgstr ""
+
+#: ../templates/request-info.php:39
+msgid "Continue to Login"
+msgstr ""
+
+#: ../templates/social-buttons-checkout.php:14
+msgid "Click here to login"
+msgstr ""
