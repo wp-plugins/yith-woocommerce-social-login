@@ -173,6 +173,7 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 					$yith_user_login          = $this->get_username( $hyb_user_login, $hyb_email );
 					$yith_user_email          = $this->get_email( $hyb_email );
 
+
 					$yith_user_login_validate = validate_username ( $yith_user_login );
 					$yith_user_email_validate = filter_var( $yith_user_email, FILTER_VALIDATE_EMAIL ) ;
 
@@ -180,18 +181,34 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 					if( empty( $yith_user_login ) ) $yith_user_login_validate = false;
 					if( empty( $yith_user_email ) ) $yith_user_email_validate = false;
 
+
+
 					$show_form        = false;
 					$show_email       = false;
 					$show_username    = false;
 					$show_form_errors = array();
 
-					if( ! $yith_user_email || ! $yith_user_email_validate ){
+
+					if( ! $yith_user_email && ! is_user_logged_in() ){
 						$show_form          = true;
 						$show_email         = true;
-						$show_form_errors[] = __('Your email address is not valid!', 'ywsl') ;
+						$show_form_errors[] = __('Add your email address', 'ywsl') ;
 					}
 
-					if( ! $yith_user_login || ! $yith_user_login_validate ){
+					if(  $yith_user_email && ! $yith_user_email_validate ){
+                            $show_form          = true;
+                            $show_email         = true;
+                            $show_form_errors[] = __('Your email address is not valid!', 'ywsl') ;
+					}
+
+                    if ( $yith_user_email_validate && $this->verify_email_exists( $yith_user_email ) ) {
+                        $show_form          = true;
+                        $show_email         = true;
+                        $show_form_errors[] = __( 'This email already exists', 'ywsl' );
+                    }
+
+
+                    if( ! $yith_user_login || ! $yith_user_login_validate ){
 						$show_form          = true;
 						$show_username      = true;
 						$show_form_errors[] = __('Username is not valid!', 'ywsl') ;
@@ -212,12 +229,13 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 						exit;
 					}else{
 						//verify if exist an user with that email
-						$current_customer_id = $this->verify_email_exists( $yith_user_email );
-
-						if(! $current_customer_id){
-							//create user
-							$current_customer_id = $this->add_user( $yith_user_login, $yith_user_email, $user_profile );
-						}
+					//	$current_customer_id = $this->verify_email_exists( $yith_user_email );
+                        if ( is_user_logged_in() ) {
+                            $current_user = wp_get_current_user();
+                            $current_customer_id = $current_user->ID;
+                        }else{
+                            $current_customer_id = $this->add_user( $yith_user_login, $yith_user_email, $user_profile );
+                        }
 
 						//link account
 						add_user_meta( $current_customer_id, $social.'_login_id', $user_profile->identifier, true );
@@ -300,8 +318,9 @@ if( ! class_exists( 'YITH_WC_Social_Login' ) ){
 			global $wpdb;
 
 			$usermeta_table = $wpdb->prefix . 'usermeta';
-			$query          = $wpdb->prepare( 'SELECT user_id FROM ' . $usermeta_table . ' WHERE meta_key = "%s" AND  meta_value= "%s"', $social . '_login', $identifier );
+			$query          = $wpdb->prepare( 'SELECT user_id FROM ' . $usermeta_table . ' WHERE meta_key = "%s" AND  meta_value= "%s"', $social . '_login_id', $identifier );
 			$user_id        = $wpdb->get_var( $query );
+
 			if ( $user_id ) {
 				return $user_id;
 			} else {

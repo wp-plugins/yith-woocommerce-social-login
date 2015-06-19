@@ -2,7 +2,7 @@
 /*
 Plugin Name: YITH WooCommerce Social Login
 Description: YITH WooCommerce Social login is a plugin that allows you to login to your e-commerce site through your Facebook or Twitter or Google+ account.
-Version: 1.0.3
+Version: 1.0.4
 Author: Yithemes
 Author URI: http://yithemes.com/
 Text Domain: ywsl
@@ -29,7 +29,7 @@ if ( defined( 'YITH_YWSL_PREMIUM' ) ) {
     function yith_ywsl_install_free_admin_notice() {
         ?>
         <div class="error">
-            <p><?php _e( 'You can\'t activate the free version of YITH Woocommerce Social Login while you are using the premium one.', 'ywraq' ); ?></p>
+            <p><?php _e( 'You can\'t activate the free version of YITH Woocommerce Social Login while you are using the premium one.', 'ywsl' ); ?></p>
         </div>
     <?php
     }
@@ -60,7 +60,7 @@ if ( !function_exists( 'yith_ywsl_install_woocommerce_admin_notice' ) ) {
 if ( defined( 'YITH_YWSL_VERSION' ) ) {
     return;
 }else{
-    define( 'YITH_YWSL_VERSION', '1.0.3' );
+    define( 'YITH_YWSL_VERSION', '1.0.4' );
 }
 
 if ( ! defined( 'YITH_YWSL_FREE_INIT' ) ) {

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YIT WooCommerce Social Login\n"
-"POT-Creation-Date: 2015-05-12 09:36+0100\n"
-"PO-Revision-Date: 2015-05-14 11:40+0100\n"
+"POT-Creation-Date: 2015-06-19 13:07+0100\n"
+"PO-Revision-Date: 2015-06-19 13:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: Yithemes <plugins@yithemes.com>\n"
 "Language: en\n"
@@ -37,51 +37,59 @@ msgstr ""
 msgid "Plugin Documentation"
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:191
+#: ../includes/class-yith-social-login.php:195
+msgid "Add your email address"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:201
 msgid "Your email address is not valid!"
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:197
+#: ../includes/class-yith-social-login.php:207
+msgid "This email already exists"
+msgstr ""
+
+#: ../includes/class-yith-social-login.php:214
 msgid "Username is not valid!"
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:414
+#: ../includes/class-yith-social-login.php:433
 msgid "Unspecified error."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:417
+#: ../includes/class-yith-social-login.php:436
 msgid "Hybriauth configuration error."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:420
+#: ../includes/class-yith-social-login.php:439
 msgid "Provider not properly configured."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:423
+#: ../includes/class-yith-social-login.php:442
 msgid "Unknown or disabled provider."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:426
+#: ../includes/class-yith-social-login.php:445
 msgid "Missing provider application credentials."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:429
+#: ../includes/class-yith-social-login.php:448
 msgid ""
 "Authentification failed. The user has canceled the authentication or the "
 "provider refused the connection."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:432
+#: ../includes/class-yith-social-login.php:451
 msgid ""
 "User profile request failed. User might not be connected to the provider and "
 "have to authenticate again."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:435
+#: ../includes/class-yith-social-login.php:454
 msgid "User not connected to the provider."
 msgstr ""
 
-#: ../includes/class-yith-social-login.php:438
+#: ../includes/class-yith-social-login.php:457
 msgid "Provider does not support this feature."
 msgstr ""
 
@@ -228,15 +236,15 @@ msgstr ""
 msgid "Please, enter your information in the form below to continue"
 msgstr ""
 
-#: ../templates/request-info.php:22
+#: ../templates/request-info.php:27
 msgid "Username"
 msgstr ""
 
-#: ../templates/request-info.php:28
+#: ../templates/request-info.php:33
 msgid "Email"
 msgstr ""
 
-#: ../templates/request-info.php:34
+#: ../templates/request-info.php:39
 msgid "Continue to Login"
 msgstr ""
 

@@ -405,8 +405,10 @@ if ( ! class_exists( 'YIT_Metabox' ) ) {
          * @since    1.0
          * @author   Emanuela Castorina <emanuela.castorina@yithemes.it>
          */
-        public function register_metabox() {
-            add_meta_box( $this->id, $this->options['label'], array( $this, 'show' ), $this->options['pages'], $this->options['context'], $this->options['priority'] );
+        public function register_metabox( $post_type ) {
+            if( in_array( $post_type, (array) $this->options['pages'] ) ){
+                add_meta_box( $this->id, $this->options['label'], array( $this, 'show' ), $post_type, $this->options['context'], $this->options['priority'] );
+            }
         }
 
         /**

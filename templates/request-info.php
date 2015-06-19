@@ -14,6 +14,11 @@ login_header(__('Login', 'ywsl') );
         <p>
             <?php _e( "Please, enter your information in the form below to continue", 'ywsl' ); ?>.
         </p>
+        <?php if( !empty($errors) ):
+            foreach( $errors as $error ){
+                echo "<p>{$error}</p>";
+            }
+        endif; ?>
     </div>
 
     <form name="loginform" id="loginform" action="#" method="post">

@@ -59,6 +59,10 @@ if ( ! class_exists( 'YIT_Plugin_Licence' ) ) {
         public function __construct() {
             parent::__construct();
 
+	        if ( ! is_admin() ) {
+		        return;
+	        }
+
             $this->_settings = array(
                 'parent_page' => 'yit_plugin_panel',
                 'page_title'  => __( 'Licence Activation', 'yith-plugin-fw' ),
