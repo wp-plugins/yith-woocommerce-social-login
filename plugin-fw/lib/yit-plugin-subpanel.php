@@ -145,7 +145,7 @@ if ( ! class_exists( 'YIT_Plugin_SubPanel' ) ) {
                     <form method="post">
                         <?php $warning = __( 'If you continue with this action, you will reset all the options in this page.', 'yith-plugin-fw' ) ?>
                         <input type="hidden" name="yit-action" value="reset" />
-                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to Default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
+                        <input type="submit" name="yit-reset" class="button-secondary" value="<?php _e( 'Reset to default', 'yith-plugin-fw' ) ?>" onclick="return confirm('<?php echo $warning . '\n' . __( 'Are you sure?', 'yith-plugin-fw' ) ?>');" />
                     </form>
                     <p>&nbsp;</p>
                 <?php endif ?>

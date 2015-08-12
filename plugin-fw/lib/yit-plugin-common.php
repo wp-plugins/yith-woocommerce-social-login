@@ -27,7 +27,7 @@ class YIT_Plugin_Common {
 
 
         'awesome_icons'      => array(
-            ''     => '00 no-icon',
+            ''     => 'no-icon',
             'f042' => 'adjust',
             'f170' => 'adn',
             'f037' => 'align-center',
